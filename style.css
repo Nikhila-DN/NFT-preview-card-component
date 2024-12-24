@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root{
+    /* Primary */
+    --blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /* Neutral */
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: "Outfit", serif;
+    font-size: 18px;
+    background-color: var(--main-BG);
+}
+
+.card{
+    width: 370px;
+    height: auto;
+    margin: 10% auto;
+    background-color: var(--card-BG);
+    padding: 3%;
+    border-radius: 15px;
+}
+.main-img .main{
+    width: 100%;
+    border-radius: 9px;
+}
+
+.main-img{
+    position: relative;
+}
+
+.main-img div {
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 50%, 60%);
+    width: 100%;
+    height: calc(100% - 4px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 15px;
+}
+  
+.main-img div:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.main-img div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.main-img, h1, h2 span{
+    cursor: pointer;
+}
+
+h1{
+    color: var(--White);
+    font-weight: 600;
+}
+
+hr{
+    color: var(--line);
+    margin: 7% auto;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+}
+
+.eth, .time{
+    display: flex;
+    gap: 0.6rem;
+}
+
+.eth{
+    color: var(--Cyan);
+    font-weight: 600;
+}
+
+p, h2, .time{
+    color: var(--blue);
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.avatar{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem ;
+}
+
+.avatar img{
+    border: 2px solid var(--White);
+    border-radius: 50%;
+    width: 15%;
+}
+
+h2 span{
+    color: var(--White);
+}
+
+h1:hover, h2 span:hover{
+    color: var(--Cyan);
+}
+
+@media(max-width:720px){
+    .card{
+        padding: 5%;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center;  color: var(--blue);}
+.attribution a { color: white; }
